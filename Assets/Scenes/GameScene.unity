@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 162065785}
   - component: {fileID: 162065784}
   - component: {fileID: 162065783}
+  - component: {fileID: 162065787}
   m_Layer: 0
   m_Name: Road
   m_TagString: Untagged
@@ -219,6 +220,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -27.788, z: 105.766}
+--- !u!114 &162065787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162065782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515c7737fff86ab4c8ad70d03152641e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &345551635
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,6 +339,7 @@ GameObject:
   - component: {fileID: 349069532}
   - component: {fileID: 349069531}
   - component: {fileID: 349069530}
+  - component: {fileID: 349069534}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -409,6 +423,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -31.17, y: -32.935, z: 15.316}
+--- !u!114 &349069534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349069529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515c7737fff86ab4c8ad70d03152641e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
