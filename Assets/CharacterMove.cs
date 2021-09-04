@@ -12,6 +12,8 @@ public class CharacterMove : MonoBehaviour
     private float FingerPosX1; //タップし、指が画面から離れた瞬間のx座標
     private float FingerPosNow; //現在の指のx座標
     private float PosDiff = 0.5f; //x座標の差のいき値。
+
+    private int Position = 0;
     
     [SerializeField]
     private GameObject target;
@@ -45,11 +47,19 @@ public class CharacterMove : MonoBehaviour
             //横移動の判断基準
             if (FingerPosNow - FingerPosX0 >= PosDiff && FingerPosNow - FingerPosX0 != 0)
             {
-                MoveToRight(); //別途定義した右方向移動のメソッドを実行
+                if (Position < 1)
+                {
+                    MoveToRight(); //別途定義した右方向移動のメソッドを実行
+                    Position++;
+                }
             }
             else if (FingerPosX0 - FingerPosNow >= PosDiff && FingerPosNow - FingerPosX0 != 0)
             {
-                MoveToLeft(); //別途定義した左方向移動のメソッドを実行
+                if (Position > -1)
+                {
+                    MoveToLeft(); //別途定義した左方向移動のメソッドを実行
+                    Position--;
+                }
             }
         }
     }
