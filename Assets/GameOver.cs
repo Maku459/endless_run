@@ -17,7 +17,7 @@ public class GameOver : MonoBehaviour
     void Start() {
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
         Damaged();
         Debug.Log("Hit"); // ログを表示する
