@@ -6,6 +6,8 @@ public class GameOver : MonoBehaviour
 {
     private int count = 0;
     [SerializeField]
+    GameObject GameOverUI = null;
+    [SerializeField]
     Renderer renderer;// 点滅周期
     Coroutine flicker;
     bool isDamaged;
@@ -19,8 +21,11 @@ public class GameOver : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Damaged();
-        Debug.Log("Hit"); // ログを表示する
+        if (other.CompareTag("Obstacle"))
+        {
+            Damaged();
+            Debug.Log("Hit"); // ログを表示する
+        }
     }
 
     void Damaged()
@@ -29,6 +34,13 @@ public class GameOver : MonoBehaviour
         if (isDamaged)
             return;
         StartFlicker();
+
+        if(count >= 3)
+        {
+            Instantiate(GameOverUI, transform.position, Quaternion.identity);
+            Time.timeScale = 0;
+        }
+        count++;
     }
     
     void StartFlicker()

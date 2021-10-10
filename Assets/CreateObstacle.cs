@@ -22,11 +22,6 @@ public class CreateObstacle : MonoBehaviour
             size = size * 10;
             go.transform.localScale = size;
             go.transform.SetParent(parent.transform, true);
-            
-            if (go.transform.position.z >= 0)
-            {
-                GameObject.Destroy(go);
-            }
         }
     }
 }
