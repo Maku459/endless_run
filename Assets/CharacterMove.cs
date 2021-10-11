@@ -75,14 +75,14 @@ public class CharacterMove : MonoBehaviour
     public void MoveToRight()
     {
         Debug.Log("MoveToRight");
-        iTween.MoveBy(target, iTween.Hash("x", 0.8f, "time", 1f, "delay", 0f, "easetype", "easeOutCubic"));
+        iTween.MoveBy(target, iTween.Hash("x", -1.0f, "time", 1f, "delay", 0f, "easetype", "easeOutCubic"));
         ResetParameter();
     }
 
     public void MoveToLeft()
     {
         Debug.Log("MoveToLeft");
-        iTween.MoveBy(target, iTween.Hash("x", -0.8f, "time", 1f, "delay", 0f, "easetype", "easeOutCubic"));
+        iTween.MoveBy(target, iTween.Hash("x",　1.0f, "time", 1f, "delay", 0f, "easetype", "easeOutCubic"));
         ResetParameter();
     }
 
