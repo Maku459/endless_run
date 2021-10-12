@@ -16,7 +16,7 @@ public class CreateDogs : MonoBehaviour
         if(this.delta > this.dogSpan)
         {
             this.delta = 0;
-            float[] pxArray = new float[3] {-1.0f, 0, 1.0f};
+            float[] pxArray = new float[3] {-1.1f, 0, 1.1f};
             var px = pxArray[Random.Range(0,3)];
             GameObject dog = Instantiate(otherDog, new Vector3(px,(float)-3.84,(float)-5.63), Quaternion.Euler(-120f, 0f, 8f)) as GameObject;　//InstantiateメソッドはObject型を返すが、GameObject型で受け取りたいのでキャストという強制型変換をしている
             Vector3 size = dog.transform.localScale; //現在の大きさを代入
