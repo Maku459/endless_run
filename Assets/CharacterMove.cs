@@ -14,7 +14,7 @@ public class CharacterMove : MonoBehaviour
     private float PosDiff = 0.5f; //x座標の差のいき値。
 
     private int Position = 0;
-    private bool flag = true; //ジャンプの可否判定。接地していたらtrue
+    // private bool flag = true; //ジャンプの可否判定。接地していたらtrue
     
     [SerializeField]
     private GameObject target;
@@ -41,7 +41,7 @@ public class CharacterMove : MonoBehaviour
         {
             FingerPosX1 = Input.mousePosition.x;
             //ジャンプの判断基準
-            if (Mathf.Abs(FingerPosX0 - FingerPosX1) < PosDiff && FingerPosNow != 0 && flag)
+            if (Mathf.Abs(FingerPosX0 - FingerPosX1) < PosDiff && FingerPosNow != 0 && target.transform.position.y < 3.5)
             {
                 Jump();
             }
@@ -65,17 +65,21 @@ public class CharacterMove : MonoBehaviour
         }
     }
     
+    /*
     void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("World"))
+        if (other.CompareTag("World"))
         {
-            flag = false;
+            flag = true;
+            Debug.Log(flag);
         }
         else
         {
-            flag = true;
+            flag = false;
+            Debug.Log(flag);
         }
     }
+    */
 
     public void Jump()
     {

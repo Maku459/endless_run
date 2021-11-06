@@ -17,6 +17,7 @@ public sealed class CalculateScore : MonoBehaviour
     private void Awake()
     {
         _awakeTime = Time.realtimeSinceStartup;
+        Time.timeScale = 1;
     }
 
     private void Update()
