@@ -311,6 +311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextDog: {fileID: 551309279}
   input: {fileID: 391784203}
+  particleObject: {fileID: 3167453065169078369, guid: b29f68bdc0ead1349b8dc61d55c85294, type: 3}
 --- !u!54 &96077751
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1223,6 +1224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextDog: {fileID: 96077749}
   input: {fileID: 391784203}
+  particleObject: {fileID: 3167453065169078369, guid: b29f68bdc0ead1349b8dc61d55c85294, type: 3}
 --- !u!1 &553793978
 GameObject:
   m_ObjectHideFlags: 0

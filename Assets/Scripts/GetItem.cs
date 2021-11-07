@@ -11,6 +11,8 @@ public class GetItem : MonoBehaviour
 
     public GameObject nextDog;
     public GameObject input;
+    public GameObject particleStar;
+    public GameObject particleSmoke;
 
     void Start() {
         
@@ -21,23 +23,21 @@ public class GetItem : MonoBehaviour
         if (other.CompareTag("Item"))
         {
             Debug.Log(other.name);
+            Instantiate(particleStar, this.transform.position, Quaternion.identity);
             if (other.name == "ketchup(Clone)")
             {
                 isKetchup = true;
                 Destroy(other.gameObject);
-                Debug.Log("isKetchup");
             } 
             else if (other.name == "mustard(Clone)")
             {
                 isMustard = true;
                 Destroy(other.gameObject);
-                Debug.Log("isMustard");
             }
             else
             {
                 isBread = true;
                 Destroy(other.gameObject);
-                Debug.Log("isBread");
             }
 
             if (isKetchup && isMustard && isBread)
@@ -49,6 +49,7 @@ public class GetItem : MonoBehaviour
 
     void ChangeChara()
     {
+        Instantiate(particleSmoke, this.transform.position, Quaternion.identity);
         gameObject.SetActive (false);
         nextDog.SetActive(true);
         input.GetComponent<WorldRotate>().speed = 1.2f;

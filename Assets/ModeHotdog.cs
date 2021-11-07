@@ -9,6 +9,7 @@ public class ModeHotdog : MonoBehaviour
     
     public GameObject nextDog;
     public GameObject input;
+    public GameObject particleObject;
     
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class ModeHotdog : MonoBehaviour
         this.delta += Time.deltaTime;
         if(this.delta > this.span)
         {
+            Instantiate(particleObject, this.transform.position, Quaternion.identity);
             gameObject.SetActive (false);
             nextDog.SetActive(true);
         }
