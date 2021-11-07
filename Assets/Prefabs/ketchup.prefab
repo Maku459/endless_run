@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1974708260849763468
+--- !u!1 &1695529778903764327
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2278616892553855709}
-  - component: {fileID: 2032650757418452150}
-  - component: {fileID: 5300205070078937579}
-  - component: {fileID: 4732552609551332785}
-  - component: {fileID: 2820840406801452254}
-  - component: {fileID: 617218901969334546}
+  - component: {fileID: 2075152229850388445}
+  - component: {fileID: 3126536493176756344}
+  - component: {fileID: 902768495874829490}
+  - component: {fileID: 1634554794076727241}
+  - component: {fileID: 169291389296528754}
+  - component: {fileID: 6467133750061912326}
   m_Layer: 0
-  m_Name: Sphere
-  m_TagString: Obstacle
+  m_Name: ketchup
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2278616892553855709
+--- !u!4 &2075152229850388445
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974708260849763468}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.018, y: -0.20200004, z: -0.524}
-  m_LocalScale: {x: 0.06, y: 0.06, z: 0.06}
+  m_GameObject: {fileID: 1695529778903764327}
+  m_LocalRotation: {x: 0.4649987, y: 0.7522948, z: 0.34496328, w: 0.31437105}
+  m_LocalPosition: {x: 0.021061232, y: -0.20729566, z: -0.54135317}
+  m_LocalScale: {x: 0.02, y: 0.045, z: 0.02}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2032650757418452150
+--- !u!33 &3126536493176756344
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974708260849763468}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &5300205070078937579
+  m_GameObject: {fileID: 1695529778903764327}
+  m_Mesh: {fileID: 2534964839176971238, guid: 2f20aa3ec2c453445b793330c9d24302, type: 3}
+--- !u!23 &902768495874829490
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974708260849763468}
+  m_GameObject: {fileID: 1695529778903764327}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 50571896f571fd446a8f9b6a3468a09f, type: 2}
+  - {fileID: 2100000, guid: 04bd236c630df2b40b4223f9cdd19828, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,26 +84,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &4732552609551332785
-SphereCollider:
+--- !u!136 &1634554794076727241
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974708260849763468}
+  m_GameObject: {fileID: 1695529778903764327}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &2820840406801452254
+  m_Radius: 1.0000002
+  m_Height: 2.7589054
+  m_Direction: 1
+  m_Center: {x: -0.0000004995345, y: 0.25386578, z: 0}
+--- !u!54 &169291389296528754
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974708260849763468}
+  m_GameObject: {fileID: 1695529778903764327}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -113,17 +114,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &617218901969334546
+--- !u!114 &6467133750061912326
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974708260849763468}
+  m_GameObject: {fileID: 1695529778903764327}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eebfa1ecb929ad7499fee4bc375fca04, type: 3}
+  m_Script: {fileID: 11500000, guid: 96507dd1e2650e44787a584cd2537c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planet: {fileID: 0}
-  accelerationScale: 0
