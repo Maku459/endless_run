@@ -12,6 +12,9 @@ public class GameOver : MonoBehaviour
     [SerializeField]
     Renderer renderer;// 点滅周期
     Coroutine flicker;
+    [SerializeField]
+    public AudioClip damagesound;
+    AudioSource audioSource;
     bool isDamaged;
     float flickerDuration = 1.5f; //ダメージ点滅の長さ。無敵時間と共通。
     float flickerTotalElapsedTime;//ダメージ点滅の合計経過時間。
@@ -19,6 +22,7 @@ public class GameOver : MonoBehaviour
     float flickerInterval = 0.075f;//ダメージ点滅のRendererの有効・無効切り替え用のインターバル。
     
     void Start() {
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -37,6 +41,7 @@ public class GameOver : MonoBehaviour
         if (isDamaged)
             return;
         StartFlicker();
+        audioSource.PlayOneShot(damagesound);
         count++;
 
         if(count >= 3)

@@ -18,11 +18,15 @@ public class CharacterMove : MonoBehaviour
     
     [SerializeField]
     private GameObject target;
+    [SerializeField]
+    public AudioClip jumpsound;
+    AudioSource audioSource;
     
     // Start is called before the first frame update
     void Start()
     {
         Application.targetFrameRate = 30; // 30FPSに設定
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -44,6 +48,7 @@ public class CharacterMove : MonoBehaviour
             if (Mathf.Abs(FingerPosX0 - FingerPosX1) < PosDiff && FingerPosNow != 0 && target.transform.position.y < 3.5)
             {
                 Jump();
+                audioSource.PlayOneShot(jumpsound);
             }
             //横移動の判断基準
             if (FingerPosNow - FingerPosX0 >= PosDiff && FingerPosNow - FingerPosX0 != 0)
