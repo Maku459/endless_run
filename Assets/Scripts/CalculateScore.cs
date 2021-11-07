@@ -14,6 +14,9 @@ public sealed class CalculateScore : MonoBehaviour
     private float _awakeTime;
     private int _lastSecondsSinceAwake;
 
+    private int score;
+    public int bonus;
+
     private void Awake()
     {
         _awakeTime = Time.realtimeSinceStartup;
@@ -25,7 +28,8 @@ public sealed class CalculateScore : MonoBehaviour
         var secondsSinceAwake = (int)(Time.realtimeSinceStartup - _awakeTime);
         if (_lastSecondsSinceAwake != secondsSinceAwake && Time.timeScale != 0)
         {
-            _text.text = secondsSinceAwake.ToString("F0");
+            score = secondsSinceAwake + bonus;
+            _text.text = score.ToString("F0");
             _lastSecondsSinceAwake = secondsSinceAwake;
         }
     }

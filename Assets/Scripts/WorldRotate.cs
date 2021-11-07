@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WorldRotate : MonoBehaviour
 {
+    public float speed = 1.0f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,6 @@ public class WorldRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.RotateAround(new Vector3 (0, (float) -1.68, 0), transform.right, 45*Time.deltaTime);
+        transform.RotateAround(new Vector3 (0, (float) -1.68, 0), transform.right, 45*Time.deltaTime*speed);
     }
 }

@@ -51,7 +51,7 @@ public class CharacterMove : MonoBehaviour
                 audioSource.PlayOneShot(jumpsound);
             }
             //横移動の判断基準
-            if (FingerPosNow - FingerPosX0 >= PosDiff && FingerPosNow - FingerPosX0 != 0)
+            if (FingerPosNow - FingerPosX0 >= PosDiff && FingerPosNow - FingerPosX0 != 0 && target.transform.position.y < 3.5)
             {
                 if (Position < 1)
                 {
@@ -59,7 +59,7 @@ public class CharacterMove : MonoBehaviour
                     Position++;
                 }
             }
-            else if (FingerPosX0 - FingerPosNow >= PosDiff && FingerPosNow - FingerPosX0 != 0)
+            else if (FingerPosX0 - FingerPosNow >= PosDiff && FingerPosNow - FingerPosX0 != 0 && target.transform.position.y < 3.5)
             {
                 if (Position > -1)
                 {
