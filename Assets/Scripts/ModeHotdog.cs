@@ -12,6 +12,9 @@ public class ModeHotdog : MonoBehaviour
     public GameObject world;
     public GameObject particleObject;
     
+    [SerializeField] float shakeAmount;
+    [SerializeField] float shakeDuration;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,11 @@ public class ModeHotdog : MonoBehaviour
             gameObject.SetActive (false);
             nextDog.SetActive(true);
         }
+    }
+   
+    void FixedUpdate () {
+        iTween.ShakePosition ( gameObject, Vector3.one * shakeAmount, shakeDuration );
+        iTween.PunchRotation(gameObject, iTween.Hash("x", 10f, "time", 3f));
     }
     void OnTriggerEnter(Collider other)
     {

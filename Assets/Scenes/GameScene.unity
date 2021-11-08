@@ -311,7 +311,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextDog: {fileID: 551309279}
   input: {fileID: 391784203}
+  world: {fileID: 345551635}
   particleObject: {fileID: 3167453065169078369, guid: b29f68bdc0ead1349b8dc61d55c85294, type: 3}
+  shakeAmount: 0.03
+  shakeDuration: 5
 --- !u!54 &96077751
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -342,7 +345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 96077749}
   jumpsound: {fileID: 8300000, guid: b797d49262464054b83f3fd3f8c18c12, type: 3}
---- !u!136 &96077754
+--- !u!136 &96077755
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1013,7 +1016,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 551309279}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 1
   m_Direction: 1
@@ -1223,7 +1226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextDog: {fileID: 96077749}
-  input: {fileID: 391784203}
+  world: {fileID: 345551635}
   particleStar: {fileID: 6729778942697732466, guid: 92415ac6de047844e926b2a58fda73a0, type: 3}
   particleSmoke: {fileID: 3167453065169078369, guid: b29f68bdc0ead1349b8dc61d55c85294, type: 3}
 --- !u!1 &553793978
