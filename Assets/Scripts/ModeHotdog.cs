@@ -9,6 +9,7 @@ public class ModeHotdog : MonoBehaviour
     
     public GameObject nextDog;
     public GameObject input;
+    public GameObject world;
     public GameObject particleObject;
     
     // Start is called before the first frame update
@@ -24,6 +25,7 @@ public class ModeHotdog : MonoBehaviour
         if(this.delta > this.span)
         {
             Instantiate(particleObject, this.transform.position, Quaternion.identity);
+            world.GetComponent<WorldRotate>().ChangeSpeed();
             gameObject.SetActive (false);
             nextDog.SetActive(true);
         }
@@ -32,8 +34,8 @@ public class ModeHotdog : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
+            input.GetComponent<CalculateScore>().ScoreUp();
             Destroy(other.gameObject);
-            input.GetComponent<CalculateScore>().bonus += 10;
         }
     }
 }

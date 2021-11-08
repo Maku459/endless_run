@@ -17,4 +17,16 @@ public class WorldRotate : MonoBehaviour
     {
         transform.RotateAround(new Vector3 (0, (float) -1.68, 0), transform.right, 45*Time.deltaTime*speed);
     }
+
+    public void ChangeSpeed()
+    {
+        if (speed == 1.0f)
+        {
+            speed = 1.5f;
+        }
+        else
+        {
+            speed = 1.0f;
+        }
+    }
 }

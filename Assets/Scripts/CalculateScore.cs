@@ -33,4 +33,9 @@ public sealed class CalculateScore : MonoBehaviour
             _lastSecondsSinceAwake = secondsSinceAwake;
         }
     }
+
+    public void ScoreUp()
+    {
+        bonus += 10;
+    }
 }

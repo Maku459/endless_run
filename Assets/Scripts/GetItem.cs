@@ -10,7 +10,7 @@ public class GetItem : MonoBehaviour
     private bool isBread = false;
 
     public GameObject nextDog;
-    public GameObject input;
+    public GameObject world;
     public GameObject particleStar;
     public GameObject particleSmoke;
 
@@ -50,9 +50,9 @@ public class GetItem : MonoBehaviour
     void ChangeChara()
     {
         Instantiate(particleSmoke, this.transform.position, Quaternion.identity);
+        world.GetComponent<WorldRotate>().ChangeSpeed();
         gameObject.SetActive (false);
         nextDog.SetActive(true);
-        input.GetComponent<WorldRotate>().speed = 1.2f;
     }
     
 }
